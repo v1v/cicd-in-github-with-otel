@@ -13,7 +13,7 @@ jobs:
       - name: Export Workflow Trace
         uses: v1v/otel-export-trace-action@v2
         with:
-          otlpEndpoint: "${{ secrets.OPENTELEMETRY_ENDPOINT }}"
-          otlpHeaders: "${{ secrets.OPENTELEMETRY_HEADER }}"
+          otlpEndpoint: "${{ secrets.OTEL_EXPORTER_OTLP_ENDPOINT }}"
+          otlpHeaders: "${{ secrets.OTEL_EXPORTER_OTLP_HEADERS }}"
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           runId: ${{ github.event.workflow_run.id }}
