@@ -15,5 +15,6 @@ jobs:
         with:
           otlpEndpoint: "${{ secrets.OTEL_EXPORTER_OTLP_ENDPOINT }}"
           otlpHeaders: "${{ secrets.OTEL_EXPORTER_OTLP_HEADERS }}"
+          otelServiceName: ${{ github.repository }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           runId: ${{ github.event.workflow_run.id }}
